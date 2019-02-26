@@ -53,6 +53,7 @@ All plots should be automatically saved in your local directory.
 
 The two generators which `cubical_complex_constructor.py` uses are:
 1. An `agent (A)` can move to adjacent cell in the gridworld if it is `empty (E)`, i.e.
+
 A-E
 
 becomes
@@ -60,6 +61,7 @@ becomes
 E-A
 
 2. An `agent (A)` can push or pull an object if there is `empty space (E)` behind the `object (O)` (for pushing) or behind the agent (for pulling), and where `*`s represent cells of any other type, i.e.
+
 A-O-E
 
 *-*-*
