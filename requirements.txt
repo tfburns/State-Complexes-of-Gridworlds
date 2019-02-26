@@ -1,0 +1,16 @@
+numpy
+pandas
+docutils
+pygments
+pygame
+kivy
+ast
+networkx
+matplotlib
+pickle
+os
+copy
+numpy
+glob
+moviepy
+natsort
