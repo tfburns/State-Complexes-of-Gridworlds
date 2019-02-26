@@ -74,7 +74,7 @@ W - W - W
 
 (and vice-versa)
 
-Of course, if you wish to do more than just the above, you will need to dig into the code a bit. I may in the future make this whole package into something more user-friendly, but for now this is it. I hope that comments within the code and a few Google searches are enough to tide you through, but if not and you require any assistance, please feel free to contact me via GitHub :)
+Of course, if you wish to do more than just the above, you will need to dig into the code a bit. I may in the future make this whole repo into something more user-friendly, but for now this is it. I hope that comments within the code and a few Google searches are enough to tide you through, but if not and you require any assistance, please feel free to contact me via GitHub :)
 
 ## References
 
