@@ -60,17 +60,17 @@ becomes
 
 E - A
 
-2. An `agent (A)` can push or pull an object if there is `empty space (E)` behind the `object (O)` (for pushing) or behind the agent (for pulling), and where `*`s represent cells of any other type, i.e.
+2. An `agent (A)` can push or pull an object if there is `empty space (E)` behind the `object (O)` (for pushing) or behind the agent (for pulling), and where `W`s (wildcards) represent cells of any other type, i.e.
 
 A - O - E
 
-* - * - *
+W - W - W
 
 becomes
 
 E - A - O
 
-* - * - *
+W - W - W
 
 (and vice-versa)
 
