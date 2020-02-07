@@ -13,7 +13,7 @@ After cloning the repository, install dependencies using:
 pip install -r requirements.txt
 ```
 
-Assuming these are all installed correctly, you should be good to go.
+Assuming these are all installed correctly, you should be good to go. This repo was tested with Python 3.7.4, Kivy 1.11.1, and NetworkX 2.3.
 
 ## Usage
 

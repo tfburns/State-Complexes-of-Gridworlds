@@ -1,10 +1,10 @@
-#:kivy 1.10.0
+#:kivy 1.11.1
 
 <ToggleButton>:
     on_state: app.root.on_state(self)
 
 <Boxes>:
-    boxes: _boxes 
+    boxes: _boxes
     AnchorLayout:
         anchor_x: 'center'
         anchor_y: 'top'
@@ -13,7 +13,7 @@
             id: _screen_manager
             Screen:
                 name: 'grid'
-                BoxLayout: 
+                BoxLayout:
                     orientation: 'vertical'
                     padding: 50
                     id: _boxes
@@ -27,7 +27,7 @@
                         text: 'Create & Save World Graph'
                         size_hint: .5, .1
                     ToggleButtons:
-                        
+
     AnchorLayout:
         anchor_x: 'center'
         anchor_y: 'bottom'
