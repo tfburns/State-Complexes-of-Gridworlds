@@ -89,9 +89,9 @@ class Boxes(FloatLayout):
         # grid layout
         grid_screen = Screen(name='grid')
         self.screen_manager.add_widget(grid_screen)
-        grid_layout = GridLayout(rows=10, cols=10)
-        for j in range(1,11):
-            for i in range(1,11):
+        grid_layout = GridLayout(rows=12, cols=12)
+        for j in range(1,13):
+            for i in range(1,13):
                 btn = Button(text=str((j,i)), on_press=GridButtonCallback)
                 grid_layout.add_widget(btn)
         grid_screen.add_widget(grid_layout)
@@ -100,7 +100,9 @@ class Boxes(FloatLayout):
         options_screen = Screen(name='options')
         self.screen_manager.add_widget(options_screen)
         options_layout = GridLayout(cols=2, padding=50)
-        options_layout.add_widget(Button(text='Create & Save World Graph', size_hint=(.5, .1)))
+        save_button = Button(text='Create & Save World Graph', size_hint=(.5, .1))
+        save_button.bind(on_press=self.CreateWorldGraph)
+        options_layout.add_widget(save_button)
 
         def toggle_callback(instance):
             self.EditMode = instance.text
@@ -124,7 +126,7 @@ class Boxes(FloatLayout):
         bottom_box.add_widget(Button(text='Grid View', on_press=grid_callback))
         bottom_box.add_widget(Button(text='Options', on_press=options_callback))
 
-    def CreateWorldGraph(self):
+    def CreateWorldGraph(self, instance):
         # reduce dictionaries to selected (True) world area
         self.WorldArea = {k: v for k, v in self.WorldArea.items() if v is True}
         self.WorldStart = {k: v for k, v in self.WorldStart.items() if v is True}
@@ -222,18 +224,19 @@ class Boxes(FloatLayout):
         # plot and save the undirected graph
         nx.draw_networkx(self.UndirectedG, pos=self.WorldNodes, node_color=node_colours)
         plt.axis('off')
-        plt.savefig("world_graph.png", dpi=300)
+        plt.savefig("result/world_graph.png", dpi=300)
         plt.show()
-        nx.write_gpickle(self.UndirectedG, "graph.gpickle")
+        nx.write_gpickle(self.UndirectedG, "result/graph.gpickle")
+        print("saved files")
 
-        # save the position and node identity information
-        outfile_WorldNodes = open('node_positions','wb')
+        # save the position and node identity information       
+        outfile_WorldNodes = open('result/node_positions','wb')
         pickle.dump(self.WorldNodes,outfile_WorldNodes)
         outfile_WorldNodes.close()
-        outfile_Nodes = open('node_IDs','wb')
+        outfile_Nodes = open('result/node_IDs','wb')
         pickle.dump(node_IDs,outfile_Nodes)
         outfile_Nodes.close()
-        outfile_Orders = open('node_orders','wb')
+        outfile_Orders = open('result/node_orders','wb')
         pickle.dump(node_orders,outfile_Orders)
         outfile_Orders.close()
 

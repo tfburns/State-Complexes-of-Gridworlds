@@ -1,11 +1,4 @@
-numpy
-pandas
-docutils
-pygments
-pygame=1.9.6
-kivy=1.11.1
-networkx=2.3
-matplotlib
-numpy
-moviepy=1.0.1
-natsort=6.2.0
+kivy=2.0.0
+networkx=2.6.3
+scipy=1.7.3
+simplicial=0.6.2
