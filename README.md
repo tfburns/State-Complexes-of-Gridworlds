@@ -2,9 +2,9 @@
 
 This repository contains two Python files:
 - `worldbuilder.py`, a GUI made using `Kivy` for the creation of small, simple gridworlds; and
-- `cubical_complex_constructor.py`, a script which will take the saved gridworld from the GUI, create its cubical complex, and .
+- `cubical_complex_constructor.py`, a script which will take the saved gridworld from the GUI, create its cubical complex, and perform a check for non-positive curvature on each of the state vertices.
 
-You shouldn't need to edit `worldbuilder.py` for general usage (unless you want to add features - which you are very welcome to!), however there are some additional plots and options available in `cubical_complex_constructor.py` which are be default commented out.
+You shouldn't need to edit `worldbuilder.py` for general usage (unless you want to add features - which you are very welcome to!), however there are some additional plots and options available in `cubical_complex_constructor.py` which are by default commented out.
 
 ## Installation
 
@@ -27,9 +27,9 @@ A small GUI window should open.
 
 You should see a grid of grey cells labelled with (1, 1) in the top-left and ending in (12, 12) in the bottom-right. These 120 cells are assignable, individual cells within your gridworld. By default, all gridworld cells are unassigned and therefore do not exist. To assign them to be part of the gridworld, simply click on the desired cells. Doing so after initial loading will assign them to the gridworld `area`.
 
-By default, all `area` cells are assumed to be unoccupied, meaning an `agent` or `object` could in the future occupy it. If you don't want an `area` cell to be able to be occupied, you need to then assign it to be a `wall`. To do this, click the `Options` button at the bottom of the GUI. Now click the `wall` button (it will become highlighted), and now click the `Grid View` button at the bottom of the GUI to go back to the grid world builder. Now clicking with your cursor in `area` cells will assign them as a `wall` cell. For the purposes of the `cubical_complex_constructor.py` script, it is important that the entire gridworld area is bordered by `wall` cells on all sides (this is especially important for grid worlds which include objects).
+By default, all `area` cells are assumed to be unoccupied, meaning an `agent` or `object` could in the future occupy it. If you don't want an `area` cell to be able to be occupied, you need to then assign it to be a `wall`. To do this, click the `Options` button at the bottom of the GUI. Now click the `wall` button (it will become highlighted), and now click the `Grid View` button at the bottom of the GUI to go back to the grid world builder. Now clicking with your cursor in `area` cells will assign them as a `wall` cell. For the purposes of the `cubical_complex_constructor.py` script, it is important that the entire gridworld area is bordered by `wall` cells on all sides (this is important for grid worlds which include objects).
 
-If you wish for there to be an agent (or multiple agents) in your gridworld, set their starting position(s) to an unoccupied `area` cell by going into the options menu and clicking `Start`, then returning to the grid view and assigning those cells. You may also set goal and object cells in the same way by clicking `Goal` or `Object` in the options menu (although `Goal` cells are currently not supported).
+If you wish for there to be an agent (or multiple agents) in your gridworld, set their starting position(s) to an unoccupied `area` cell by going into the options menu and clicking `Start`, then returning to the grid view and assigning those cells. You may also set goal and object cells in the same way by clicking `Goal` or `Object` in the options menu (although `Goal` cells are currently not used in the `cubical_complex_constructor.py` script).
 
 There are two more important rules for using the `worldbuilder.py`:
 1. Only unoccupied `area` cells may have the additional assignments of `object`, `start`, or `goal` - but never more than one of these assignments!
