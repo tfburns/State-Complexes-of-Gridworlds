@@ -85,12 +85,17 @@ An example of a 3x3 room with 2 agents is provided in the `result` folder of thi
 
 ## References
 
+This code was produced as part of work for the following paper:
+```
+T. Burns & R. Tang (2022) Detecting danger in gridworlds using Gromov's Link Condition. arXiv:2201.06274
+```
+
 For more information on state complexes, especially cubical complexes (which by the nature of gridworlds, we are building here), I recommend reading
 ```
-R. Ghrist & V. Peterson (2007) The geometry and topology of reconfiguration Advances in Applied Mathematics 38:302–323
+R. Ghrist & V. Peterson (2007) The geometry and topology of reconfiguration. Advances in Applied Mathematics 38:302–323
 ```
 
 And for information about gridworlds and their broad importance to AI research as toy examples, I suggest reading
 ```
-J. Leike et al. (2017) AI Safety Gridworlds arXiv:1711.09883v2
+J. Leike et al. (2017) AI Safety Gridworlds. arXiv:1711.09883v2
 ```
