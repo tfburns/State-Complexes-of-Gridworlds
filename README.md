@@ -87,7 +87,7 @@ An example of a 3x3 room with 2 agents is provided in the `result` folder of thi
 
 This code was produced as part of work for the following paper:
 ```
-T. Burns & R. Tang (2022) Detecting danger in gridworlds using Gromov's Link Condition. arXiv:2201.06274
+T. Burns & R. Tang (2023) Detecting danger in gridworlds using Gromov's Link Condition. Transactions on Machine Learning Research, 11/2023, 1416.
 ```
 
 For more information on state complexes, especially cubical complexes (which by the nature of gridworlds, we are building here), I recommend reading
